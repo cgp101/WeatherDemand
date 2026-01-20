@@ -182,7 +182,7 @@ MIT
 
 **Delivery Forecast**
 ![Delivery Forecast](image-6.png)
-![Demand Distrubution for Delivery](image-7.png)
+![Demand Distribution for Delivery](image-7.png)
 
 **Energy Forecast**
 ![Energy Forecast](image-8.png)
@@ -190,8 +190,8 @@ MIT
 
 **Retail Forecast**
 ![Retail Forecast](image-1.png)
-![Demand Distrubution for Retail](image-2.png)
+![Demand Distribution for Retail](image-2.png)
 
 **Ecommerce  Forecast**
 ![ecommerce  Forecas](image-3.png)
-![Demand Distrubution for ecommerce](image-4.png)
+![Demand Distribution for e-commerce](image-4.png)
