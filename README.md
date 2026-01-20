@@ -82,7 +82,7 @@ Architecture is designed for plug-and-play data integration
 | API | FastAPI, Uvicorn |
 | UI | Streamlit, Plotly |
 | Weather Data | Open-Meteo API |
-| Cloud | Azure ML Studio |
+| Cloud | Azure ML Studio | --> use model training and paramaters tuning 
 
 ## Installation
 
@@ -164,6 +164,7 @@ Fetching Data from Open-Metro - between START_DATE and END_DATE.
 Example: 
 START_DATE = "2023-01-01"
 END_DATE = "2026-01-19"
+latitude and longitude for the location. 
 ![Calling Open-Metro API](image-1.png)
 
 ## License
