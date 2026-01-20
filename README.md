@@ -159,5 +159,3 @@ END_DATE = "2026-01-19"
 MIT
 
 ---
-
-*Built for ML Engineering portfolio | Vancouver, BC | 2026*
