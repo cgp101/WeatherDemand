@@ -154,7 +154,7 @@ WeatherDemand/
 ## Future Enhancements
 
 - [ ] **MCP Server** - Claude/LLM tool integration
-- [ ] **Azure AI Agent** - Pluggable KB connectors (ServiceNow, Slack)
+- [ ] **Azure AI Agent** - Pluggable KB connectors 
 - [ ] **Auto-retraining** - Feedback loop for model updates
 - [ ] **SHAP/LIME** - Explainability for predictions
 - [ ] **Multi-city support** - Extend beyond Vancouver
