@@ -28,4 +28,10 @@ prediction_logs/
 .vscode/
 
 # Test images
-*.png
+*.png.DS_Store
+*.sqlite
+pyvenv.cfg
+bin/
+share/
+__pycache__/
+.ipynb_checkpoints/
