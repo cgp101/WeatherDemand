@@ -23,22 +23,29 @@ This project demonstrates an end-to-end ML pipeline that:
 ```
 ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
 │   Open-Meteo    │────▶│   ML Pipeline   │────▶│   Streamlit     │
-│   Weather API   │     │   (XGBoost)    │     │   Dashboard     │
+│   Weather API   │     │   (XGBoost)     │     │   Dashboard     │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
-                               │
-                               ▼
-                        ┌─────────────────┐
-                        │   FastAPI       │
-                        │   REST API      │
-                        └─────────────────┘
+                               │                        │
+                               ▼                        ▼
+                        ┌─────────────────┐     ┌─────────────────┐
+                        │    Anomaly      │     │    FastAPI      │
+                        │   Detection     │     │    REST API     │
+                        │ (Z-Score + LOF) │     │                 │
+                        └─────────────────┘     └─────────────────┘
 ```
 
 ### Data Pipeline (Medallion Architecture)
 
 ```
-Bronze (Raw)                         Silver (Cleaned)        Gold (ML-Ready)
-──────────────────────────────────────────────────────────────────────────────
-hourly_weather.csv+daily_weather --> weather_features.csv --> demand_data.csv
+┌─────────────────────────────────────────────────────────────────┐
+│                    MEDALLION ARCHITECTURE                       
+├───────────────────┬───────────────────┬─────────────────────────┤
+│   Bronze (Raw)    │  Silver (Cleaned) │     Gold (ML-Ready)     │
+├───────────────────┼───────────────────┼─────────────────────────┤
+│ hourly_weather.csv│                   │                         │
+│        +          │─▶ weather_features│─▶ demand_data.csv       │
+│ daily_weather.csv │      .csv         │    (with predictions)   │
+└───────────────────┴───────────────────┴─────────────────────────┘
 ```
 
 ## Features
