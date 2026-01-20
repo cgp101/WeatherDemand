@@ -130,25 +130,36 @@ XGBoost selected as best performer across all domains.
 
 ```
 WeatherDemand/
-├── app.py                 # Streamlit dashboard
-├── api/
-│   └── main.py            # FastAPI REST endpoints
+├── data/
+│   ├── bronze/
+│   │   ├── daily_weather_data.csv
+│   │   ├── hourly_weather_data.csv
+│   │   └── data_fetch.py
+│   ├── silver/
+│   │   ├── weather_features.csv
+│   │   └── weather_features.ipynb
+│   └── gold/
+│       ├── demand_forecast_data.csv
+│       ├── demand_gen.ipynb
+│       └── eda_analysis.ipynb
+├── screenshots/
+│   └── image-1.png ... image-8.png
 ├── Weather_Models/
 │   ├── delivery_xgb.pkl
 │   ├── energy_xgb.pkl
 │   ├── retail_xgb.pkl
-│   └── ecommerce_xgb.pkl
-├── notebooks/
-│   ├── 01_data_collection.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   ├── 04_model_training.ipynb
-│   └── 05_anomaly_detection.ipynb
-├── data/
-│   ├── bronze/            # Raw API data
-│   ├── silver/            # Cleaned data
-│   └── gold/              # ML-ready features
-└── requirements.txt
+│   ├── ecommerce_xgb.pkl
+│   └── model_training.ipynb
+├── app.py
+├── mcp_server.py
+├── health_check.py
+├── anomaly_detection.ipynb
+├── Dockerfile
+├── requirements.txt
+├── env.example
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ## Future Enhancements
@@ -196,4 +207,4 @@ MIT
 <img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/280e62ff-adc6-421a-88e7-513d12bb010d" />
 <img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/cbd21755-edb6-4d57-ad60-26056b6624f0" />
 
-*This project is under active development. Upcoming features: LLM explainability, MCP server integration, and more analysis*
+*This project is under active development. Upcoming features: LLM explainability, MCP server integration, multi-city, and more analysis*
