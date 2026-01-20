@@ -36,9 +36,9 @@ This project demonstrates an end-to-end ML pipeline that:
 ### Data Pipeline (Medallion Architecture)
 
 ```
-Bronze (Raw)          Silver (Cleaned)        Gold (ML-Ready)
-─────────────────────────────────────────────────────────────
-hourly_weather.csv → weather_features.csv → demand_data.csv
+Bronze (Raw)                         Silver (Cleaned)        Gold (ML-Ready)
+──────────────────────────────────────────────────────────────────────────────
+hourly_weather.csv+daily_weather --> weather_features.csv --> demand_data.csv
 ```
 
 ## Features
