@@ -175,23 +175,25 @@ MIT
 
 ## Live Demo
 
-### Run 1 - 20th Jan 1:12AM
+### Run 1 - 20th Jan at 1:30AM
 
 **Weather and Location Verification**
-![Weather and Location Verification](image-5.png)
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/5c95eeb3-e958-4ba5-bad4-dba918bd481b" />
 
-**Delivery Forecast**
-![Delivery Forecast](image-6.png)
-![Demand Distrubution for Delivery](image-7.png)
+**Delivery Forecast and Distribution**
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/807a7dcd-7536-4c0b-9c6d-81051566a1aa" />
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/eacb7187-e485-49eb-b418-3bd9b54a20f4" />
 
-**Energy Forecast**
-![Energy Forecast](image-8.png)
-![Demand Distrubution for Energy](image.png)
+**Energy Forecast and Distribution**
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/2d8cd3ad-1fc9-43c7-9a2a-215bcb6895c8" />
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/c47d1b5c-5535-46c6-b072-abb9f7a604d0" />
 
-**Retail Forecast**
-![Retail Forecast](image-1.png)
-![Demand Distrubution for Retail](image-2.png)
+**Retail Forecast and Distribution**
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/7f7e2c87-1621-4fd2-b677-93919044ffe9" />
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/d1fd84a2-7c45-4d32-89b8-60b2ccd1eb53" />
 
-**Ecommerce  Forecast**
-![ecommerce  Forecas](image-3.png)
-![Demand Distrubution for ecommerce](image-4.png)
+**E-commerce Forecast and Distribution**
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/280e62ff-adc6-421a-88e7-513d12bb010d" />
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/cbd21755-edb6-4d57-ad60-26056b6624f0" />
+
+*This project is under active development. Upcoming features: LLM explainability, MCP server integration, and more analysis*
