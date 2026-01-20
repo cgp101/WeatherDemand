@@ -172,3 +172,26 @@ latitude and longitude for the location.
 MIT
 
 ---
+
+## Live Demo
+
+### Run 1 - 20th Jan 1:12AM
+
+**Weather and Location Verification**
+![Weather and Location Verification]((we_loca_image.png))
+
+**Delivery Forecast**
+![Delivery Forecast](delivery_fore.png)
+![Demand Distrubution for Delivery](ddd.png)
+
+**Energy Forecast**
+![Energy Forecas](ene_fore.png)
+![Demand Distrubution for Energy](image.png)
+
+**Retail Forecast**
+![Retail Forecast](image-1.png)
+![Demand Distrubution for Retail](image-2.png)
+
+**Ecommerce  Forecast**
+![ecommerce  Forecas](image-3.png)
+![Demand Distrubution for ecommerce](image-4.png)

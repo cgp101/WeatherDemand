@@ -112,12 +112,16 @@ hours = np.arange(24)
 if show_anomalies:
     anomalies = detect_anomalies(demands, weather_df)
 
-# Weather metrics
+# Get current hour's weather for LIVE metrics
+current_hour = now.hour
+current_weather = weather_df.iloc[current_hour]
+
+# Weather metrics - LIVE current conditions
 col1, col2, col3, col4 = st.columns(4)
-col1.metric("Temperature", f"{weather_df['temperature'].mean():.1f}C")
-col2.metric("Humidity", f"{weather_df['humidity'].mean():.0f}%")
-col3.metric("Precipitation", f"{weather_df['precipitation'].sum():.1f} mm")
-col4.metric("Wind", f"{weather_df['wind_speed'].max():.1f} km/h")
+col1.metric("Temperature", f"{current_weather['temperature']:.1f}C")
+col2.metric("Humidity", f"{current_weather['humidity']:.0f}%")
+col3.metric("Precipitation", f"{current_weather['precipitation']:.1f} mm")
+col4.metric("Wind", f"{current_weather['wind_speed']:.1f} km/h")
 
 st.divider()
 
@@ -146,8 +150,6 @@ col_bar, col_stats = st.columns([2, 1])
 with col_bar:
     fig_bar = go.Figure()
     fig_bar.add_trace(go.Bar(x=hours, y=demands, marker=dict(color='#3498db', opacity=0.7)))
-    fig_bar.add_hline(y=demands.mean(), line_dash="dash", line_color="red")
-    fig_bar.add_hline(y=np.median(demands), line_dash="dot", line_color="green")
     fig_bar.update_layout(title="Demand Distribution", xaxis_title="Hour", yaxis_title="Demand", 
                           template='plotly_white', showlegend=False)
     st.plotly_chart(fig_bar, use_container_width=True)
@@ -174,8 +176,3 @@ if show_anomalies:
         st.dataframe(pd.DataFrame(anomaly_data), use_container_width=True)
     else:
         st.success("No anomalies detected")
-
-# Raw data toggle
-with st.expander("Raw Data"):
-    weather_df['predicted_demand'] = demands
-    st.dataframe(weather_df, use_container_width=True)
