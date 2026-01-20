@@ -130,25 +130,36 @@ XGBoost selected as best performer across all domains.
 
 ```
 WeatherDemand/
-├── app.py                 # Streamlit dashboard
-├── api/
-│   └── main.py            # FastAPI REST endpoints
+├── data/
+│   ├── bronze/
+│   │   ├── daily_weather_data.csv
+│   │   ├── hourly_weather_data.csv
+│   │   └── data_fetch.py
+│   ├── silver/
+│   │   ├── weather_features.csv
+│   │   └── weather_features.ipynb
+│   └── gold/
+│       ├── demand_forecast_data.csv
+│       ├── demand_gen.ipynb
+│       └── eda_analysis.ipynb
+├── screenshots/
+│   └── image-1.png ... image-8.png
 ├── Weather_Models/
 │   ├── delivery_xgb.pkl
 │   ├── energy_xgb.pkl
 │   ├── retail_xgb.pkl
-│   └── ecommerce_xgb.pkl
-├── notebooks/
-│   ├── 01_data_collection.ipynb
-│   ├── 02_data_cleaning.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   ├── 04_model_training.ipynb
-│   └── 05_anomaly_detection.ipynb
-├── data/
-│   ├── bronze/            # Raw API data
-│   ├── silver/            # Cleaned data
-│   └── gold/              # ML-ready features
-└── requirements.txt
+│   ├── ecommerce_xgb.pkl
+│   └── model_training.ipynb
+├── app.py
+├── mcp_server.py
+├── health_check.py
+├── anomaly_detection.ipynb
+├── Dockerfile
+├── requirements.txt
+├── env.example
+├── .gitignore
+├── LICENSE
+└── README.md
 ```
 
 ## Future Enhancements
