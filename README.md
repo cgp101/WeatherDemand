@@ -207,4 +207,4 @@ MIT
 <img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/280e62ff-adc6-421a-88e7-513d12bb010d" />
 <img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/cbd21755-edb6-4d57-ad60-26056b6624f0" />
 
-*This project is under active development. Upcoming features: LLM explainability, MCP server integration, and more analysis*
+*This project is under active development. Upcoming features: LLM explainability, MCP server integration, multi-city, and more analysis*
