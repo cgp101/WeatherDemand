@@ -28,7 +28,8 @@ prediction_logs/
 .vscode/
 
 # Test images
-*.png.DS_Store
+*.png
+*.DS_Store
 *.sqlite
 pyvenv.cfg
 bin/
