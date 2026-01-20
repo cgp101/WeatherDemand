@@ -5,12 +5,14 @@ import numpy as np
 import joblib
 import plotly.graph_objects as go
 from datetime import datetime
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import StandardScaler
 
 MODEL_PATH = Path("Weather_Models/")
 DOMAINS = ["delivery", "energy", "retail", "ecommerce"]
+TIMEZONE = ZoneInfo("America/Vancouver")
 
 # Helper functions
 def get_season(month):
@@ -38,10 +40,9 @@ def get_vancouver_forecast():
     response = requests.get(url, params=params)
     hourly = response.json()["hourly"]
     
+    now = datetime.now(TIMEZONE)
     records = []
     for i in range(24):
-        day_of_week = datetime.now().weekday()
-        month = datetime.now().month
         records.append({
             "temperature": hourly["temperature_2m"][i],
             "humidity": hourly["relative_humidity_2m"][i],
@@ -51,12 +52,12 @@ def get_vancouver_forecast():
             "cloud_cover": hourly["cloud_cover"][i],
             "is_day": hourly["is_day"][i],
             "hour": i,
-            "day_of_week": day_of_week,
-            "month": month,
+            "day_of_week": now.weekday(),
+            "month": now.month,
             "daylight_duration": 9.5,
             "bad_weather_combo": int(hourly["rain"][i] > 2 and hourly["wind_speed_10m"][i] > 20),
-            "is_peak_hour": get_peak_hour(i, day_of_week),
-            "season": get_season(month)
+            "is_peak_hour": get_peak_hour(i, now.weekday()),
+            "season": get_season(now.month)
         })
     return pd.DataFrame(records)
 
@@ -97,7 +98,8 @@ def detect_anomalies(demands, weather_df):
 # App config
 st.set_page_config(page_title="Weather Demand Forecasting", layout="wide")
 st.title("Weather-Driven Demand Forecasting")
-st.caption(f"Vancouver, BC | {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+now = datetime.now(TIMEZONE)
+st.caption(f"Vancouver, BC | {now.strftime('%Y-%m-%d %H:%M')}")
 
 # Sidebar
 domain = st.sidebar.selectbox("Select Domain", DOMAINS, index=0)
@@ -144,8 +146,8 @@ col_bar, col_stats = st.columns([2, 1])
 with col_bar:
     fig_bar = go.Figure()
     fig_bar.add_trace(go.Bar(x=hours, y=demands, marker=dict(color='#3498db', opacity=0.7)))
-    #fig_bar.add_hline(y=demands.mean(), line_dash="dash", line_color="red")
-    #fig_bar.add_hline(y=np.median(demands), line_dash="dot", line_color="green")
+    fig_bar.add_hline(y=demands.mean(), line_dash="dash", line_color="red")
+    fig_bar.add_hline(y=np.median(demands), line_dash="dot", line_color="green")
     fig_bar.update_layout(title="Demand Distribution", xaxis_title="Hour", yaxis_title="Demand", 
                           template='plotly_white', showlegend=False)
     st.plotly_chart(fig_bar, use_container_width=True)
