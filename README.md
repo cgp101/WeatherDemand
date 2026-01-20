@@ -12,7 +12,7 @@ Real-time demand prediction system using live weather data for Vancouver, BC. Pr
 ## Overview
 
 This project demonstrates an end-to-end ML pipeline that:
-- Fetches **live weather data** from Open-Meteo API
+- Fetches **live weather data** from Open-Meteo API -- https://open-meteo.com/
 - Predicts demand for **4 business domains** (Delivery, Energy, Retail, E-commerce)
 - Detects **anomalies** using Z-Score and Local Outlier Factor
 - Serves predictions via **REST API** (FastAPI)
