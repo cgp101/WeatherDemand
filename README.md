@@ -46,6 +46,10 @@ This project demonstrates an end-to-end ML pipeline that:
 │        +          │─▶ weather_features│─▶ demand_data.csv       │
 │ daily_weather.csv │      .csv         │    (with predictions)   │
 └───────────────────┴───────────────────┴─────────────────────────┘
+
+Note: Demand data is synthetically generated with realistic business logic for demonstration.
+In production, this pipeline connects to enterprise data sources to ingest actual demand metrics.
+Architecture is designed for plug-and-play data integration
 ```
 
 ## Features
