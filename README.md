@@ -178,14 +178,14 @@ MIT
 ### Run 1 - 20th Jan 1:12AM
 
 **Weather and Location Verification**
-![Weather and Location Verification]((we_loca_image.png))
+![Weather and Location Verification](image-5.png)
 
 **Delivery Forecast**
-![Delivery Forecast](delivery_fore.png)
-![Demand Distrubution for Delivery](ddd.png)
+![Delivery Forecast](image-6.png)
+![Demand Distrubution for Delivery](image-7.png)
 
 **Energy Forecast**
-![Energy Forecas](ene_fore.png)
+![Energy Forecast](image-8.png)
 ![Demand Distrubution for Energy](image.png)
 
 **Retail Forecast**
