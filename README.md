@@ -67,10 +67,11 @@ Architecture is designed for plug-and-play data integration
 - **Local Outlier Factor**: Density-based detection
 - **Consensus voting**: HIGH (both agree), MEDIUM (one flags)
 
-### Vancouver-Specific Logic
-- Light rain (<2mm) doesn't affect demand (locals ignore drizzle)
-- Heavy rain + wind combo = significant impact
-- Peak hours differ weekday vs weekend
+### Location-Aware Logic
+- Regional weather patterns affect demand differently
+- Peak hours vary by city/timezone
+- Current demo: Vancouver, BC
+- Architecture supports multi-city expansion
 
 ## Tech Stack
 
