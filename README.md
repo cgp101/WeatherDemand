@@ -75,8 +75,14 @@ Architecture is designed for plug-and-play data integration
 
 ## Tech Stack
 
-Tech Stack
-ComponentTechnologyML FrameworkXGBoost, scikit-learnDataPandas, NumPyAPIFastAPI, UvicornUIStreamlit, PlotlyWeather DataOpen-Meteo APICloudAzure ML Studio (model training & hyperparameter tuning)
+| Component | Technology |
+|:----------|:-----------|
+| ML Framework | XGBoost, scikit-learn |
+| Data | Pandas, NumPy |
+| API | FastAPI, Uvicorn |
+| UI | Streamlit, Plotly |
+| Weather Data | Open-Meteo API |
+| Cloud | Azure ML Studio (model training & hyperparameter tuning) |
 
 ## Installation
 
