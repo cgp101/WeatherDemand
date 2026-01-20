@@ -4,6 +4,7 @@ include/
 lib/
 share/
 pyvenv.cfg
+.env
 
 # Python
 __pycache__/

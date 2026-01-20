@@ -8,3 +8,6 @@ requests
 fastapi
 uvicorn
 joblib
+mcp
+fastmcp
+openai
